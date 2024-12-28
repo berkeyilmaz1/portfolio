@@ -1,0 +1,19 @@
+{
+    "home":{
+        "berke":"Berke",
+        "yilmaz":"Yılmaz",
+        "subtitle":"A Mobile Application Developer"  
+    },
+    "about":{
+        "title":"About Me"
+    },
+    "projects":{
+        "title":"Projects"
+    },
+    "contact":{
+        "title":"Contact"
+    },
+    "experience":{
+        "title":"Experience"
+    }
+}

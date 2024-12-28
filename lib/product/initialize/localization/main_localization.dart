@@ -1,13 +1,18 @@
-// final class MainLocalization extends EasyLocalization {
-//   MainLocalization({
-//     required super.child,
-//     super.key,
-//   }) : super(
-//           path: localizationPath,
-//           useOnlyLangCode: true,
-//           supportedLocales: LocaleConstants.supportedLocales,
-//           fallbackLocale: Locales.en.locale,
-//         );
+import 'package:easy_localization/easy_localization.dart';
+import 'package:portfolio/product/initialize/localization/enums/locale_enums.dart';
+import 'package:portfolio/product/initialize/localization/locale_constants.dart';
 
-//   static const String localizationPath = 'assets/translations';
-// }
+final class MainLocalization extends EasyLocalization {
+  MainLocalization({
+    required super.child,
+    super.key,
+  }) : super(
+          path: localizationPath,
+          useOnlyLangCode: true,
+          supportedLocales: LocaleConstants.supportedLocales,
+          fallbackLocale: Locales.en.locale,
+          
+        );
+
+  static const String localizationPath = 'assets/translations';
+}

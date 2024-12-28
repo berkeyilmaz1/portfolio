@@ -1,7 +1,9 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:portfolio/product/initialize/localization/locale_keys.g.dart';
 import 'package:portfolio/product/widgets/animated_icon_button.dart';
 
-class HomeView extends StatelessWidget {
+final class HomeView extends StatelessWidget {
   const HomeView({super.key});
 
   @override
@@ -14,14 +16,15 @@ class HomeView extends StatelessWidget {
           Positioned.fill(
             child: ShaderMask(
               shaderCallback: (rect) {
-                return LinearGradient(
+                return const LinearGradient(
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                   colors: [
+                    Colors.transparent,
                     Colors.grey, // Üstteki çizgiler tam görünür
                     Colors.transparent, // Altta tamamen görünmez
                   ],
-                  stops: [0.7, 1.0], // Geçiş noktaları
+                  stops: [0.3,0.7, 1.0], // Geçiş noktaları
                 ).createShader(rect);
               },
               blendMode: BlendMode.dstIn,
@@ -42,11 +45,12 @@ class HomeView extends StatelessWidget {
           const Center(
             child: AnimatedTextView(),
           ),
-          Align(
+          const Align(
             alignment: Alignment.bottomCenter,
             child: Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: AnimatedIconButton()),
+              padding: EdgeInsets.all(16),
+              child: AnimatedIconButton(),
+            ),
           ),
         ],
       ),
@@ -54,7 +58,7 @@ class HomeView extends StatelessWidget {
   }
 }
 
-class AnimatedTextView extends StatefulWidget {
+final class AnimatedTextView extends StatefulWidget {
   const AnimatedTextView({super.key});
 
   @override
@@ -75,11 +79,12 @@ class _AnimatedTextViewState extends State<AnimatedTextView>
     );
 
     _offsetAnimation =
-        Tween<Offset>(begin: const Offset(0, 1), end: Offset.zero)
-            .animate(CurvedAnimation(
-      parent: _controller,
-      curve: Curves.easeOut,
-    ));
+        Tween<Offset>(begin: const Offset(0, 1), end: Offset.zero).animate(
+      CurvedAnimation(
+        parent: _controller,
+        curve: Curves.easeOut,
+      ),
+    );
 
     _controller.forward();
   }
@@ -103,42 +108,44 @@ class _AnimatedTextViewState extends State<AnimatedTextView>
             mainAxisSize: MainAxisSize.min,
             children: [
               SlideTransition(
-                  position: _offsetAnimation,
-                  child: Column(
-                    children: [
-                      Text(
-                        'Berke',
-                        style: TextStyle(
-                          fontSize: 96,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.red,
-                        ),
+                position: _offsetAnimation,
+                child: Column(
+                  children: [
+                    const Text(
+                      LocaleKeys.home_berke,
+                      style: TextStyle(
+                        fontSize: 96,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
                       ),
-                      Text(
-                        'Yılmaz',
-                        style: TextStyle(
-                          fontSize: 96,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.red,
-                        ),
+                    ).tr(),
+                    const Text(
+                      LocaleKeys.home_yilmaz,
+                      style: TextStyle(
+                        fontSize: 96,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
                       ),
-                    ],
-                  )),
+                    ).tr(),
+                  ],
+                ),
+              ),
               SlideTransition(
-                  position: _offsetAnimation,
-                  child: Column(
-                    children: [
-                      SizedBox(height: 16),
-                      Text(
-                        'A Mobile Application Developer',
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontStyle: FontStyle.italic,
-                          color: Colors.black,
-                        ),
+                position: _offsetAnimation,
+                child: Column(
+                  children: [
+                    const SizedBox(height: 16),
+                    const Text(
+                      LocaleKeys.home_subtitle,
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontStyle: FontStyle.italic,
+                        color: Colors.black,
                       ),
-                    ],
-                  )),
+                    ).tr(),
+                  ],
+                ),
+              ),
             ],
           ),
         ),

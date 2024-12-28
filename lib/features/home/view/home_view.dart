@@ -111,7 +111,7 @@ class _AnimatedTextViewState extends State<AnimatedTextView>
                         style: TextStyle(
                           fontSize: 96,
                           fontWeight: FontWeight.bold,
-                          color: Colors.black,
+                          color: Colors.red,
                         ),
                       ),
                       Text(
@@ -119,7 +119,7 @@ class _AnimatedTextViewState extends State<AnimatedTextView>
                         style: TextStyle(
                           fontSize: 96,
                           fontWeight: FontWeight.bold,
-                          color: Colors.black,
+                          color: Colors.red,
                         ),
                       ),
                     ],

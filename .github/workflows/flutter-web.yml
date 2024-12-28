@@ -16,7 +16,7 @@ jobs:
       - name: Set up Flutter
         uses: subosito/flutter-action@v2 # Flutter ortamını kurar
         with:
-          flutter-version: "stable" # Stabil sürümü kullanır
+          flutter-version: "3.27.0" # Stabil sürümü kullanır
 
       - name: Install Dependencies
         run: flutter pub get # Proje bağımlılıklarını indirir

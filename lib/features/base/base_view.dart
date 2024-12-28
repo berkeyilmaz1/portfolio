@@ -22,13 +22,13 @@ class _BaseViewState extends State<BaseView> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
-          controller: _scrollController,
-          child: Column(
-            children: [
-              HomeView(),
-              Placeholder(),
-            ],
-          )),
+        controller: _scrollController,
+        child: const Column(
+          children: [
+            HomeView(),
+          ],
+        ),
+      ),
     );
   }
 }

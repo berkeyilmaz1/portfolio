@@ -1,0 +1,20 @@
+{
+    "home":{
+        "berke":"Berke",
+        "yilmaz":"Yılmaz",
+        "subtitle":"Mobil Uygulama Geliştiricisi"  
+    },
+    "about":{
+        "title":"Hakkımda"
+    },
+    "projects":{
+        "title":"Projeler"
+    },
+    "contact":{
+        "title":"İletişim"
+    },
+    "experience":{
+        "title":"Deneyim"
+    }
+
+}

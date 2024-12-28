@@ -11,7 +11,6 @@ final class MainLocalization extends EasyLocalization {
           useOnlyLangCode: true,
           supportedLocales: LocaleConstants.supportedLocales,
           fallbackLocale: Locales.en.locale,
-          
         );
 
   static const String localizationPath = 'assets/translations';

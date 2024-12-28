@@ -6,8 +6,10 @@ import 'package:portfolio/product/initialize/localization/locale_keys.g.dart';
 import 'package:portfolio/product/utils/border_radius_general.dart';
 import 'package:portfolio/product/widgets/animated_icon_button.dart';
 import 'package:portfolio/product/widgets/page/page_padding.dart';
+import 'package:portfolio/product/widgets/widget_sizes.dart';
 
 part '../widgets/animated_text_view.dart';
+part '../widgets/menu_item.dart';
 
 final class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -21,9 +23,10 @@ class _HomeViewState extends State<HomeView>
   @override
   void initState() {
     super.initState();
+    initializeMenuItems();
     controller = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 1),
+      duration: const Duration(milliseconds: 500),
     );
     animation = Tween<double>(begin: 0, end: 1).animate(controller);
   }
@@ -46,36 +49,14 @@ class _HomeViewState extends State<HomeView>
                   target: Alignment.topLeft,
                 ),
                 portalFollower: Container(
-                  height: MediaQuery.of(context).size.height / 4,
-                  width: MediaQuery.of(context).size.width / 4,
                   decoration: const BoxDecoration(
                     color: Colors.black,
                     borderRadius: BorderRadiusGeneral.all(),
                   ),
                   child: Column(
-                    children: [
-                      ListTile(
-                        title: const Text(
-                          LocaleKeys.about_title,
-                          style: TextStyle(color: Colors.white),
-                        ).tr(),
-                        onTap: menuAnimation,
-                      ),
-                      ListTile(
-                        title: const Text(
-                          LocaleKeys.projects_title,
-                          style: TextStyle(color: Colors.white),
-                        ).tr(),
-                        onTap: menuAnimation,
-                      ),
-                      ListTile(
-                        title: const Text(
-                          LocaleKeys.contact_title,
-                          style: TextStyle(color: Colors.white),
-                        ).tr(),
-                        onTap: menuAnimation,
-                      ),
-                    ],
+                    mainAxisSize: MainAxisSize.min,
+                    spacing: WidgetSizes.spacingS,
+                    children: menuItems,
                   ),
                 ),
                 child: IconButton(
@@ -140,6 +121,8 @@ class _HomeViewState extends State<HomeView>
     );
   }
 }
+
+
  // if (controller.status == AnimationStatus.completed ||
                           //     controller.status == AnimationStatus.dismissed) {
                           //   setState(() {

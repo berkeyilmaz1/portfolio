@@ -27,5 +27,5 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4 # Dağıtım işlemi
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }} # Otomatik token
+          github_token: ${{ secrets.ACTIONS_DEPLOY_KEY }} # Otomatik token
           publish_dir: build/web # Derlenen dosyaların dizini

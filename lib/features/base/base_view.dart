@@ -26,6 +26,7 @@ class _BaseViewState extends State<BaseView> {
           child: Column(
             children: [
               HomeView(),
+              Placeholder(),
             ],
           )),
     );

@@ -4,9 +4,11 @@ import 'package:portfolio/product/initialize/localization/locale_keys.g.dart';
 
 mixin HomeViewMixin on State<HomeView> {
   late AnimationController controller;
+  late AnimationController menuController;
   late Animation<double> animation;
   final OverlayPortalController overlayPortalController =
       OverlayPortalController();
+  late Animation<double> menuAnimation;
 
   late final List<MenuItem> menuItems;
 
@@ -26,14 +28,15 @@ mixin HomeViewMixin on State<HomeView> {
     ]
         .map(
           (title) => MenuItem(
-            onTap: menuAnimation,
+            onTap: menuLogic,
             title: title,
           ),
         )
         .toList();
   }
 
-  void menuAnimation() {
+  ///TODO fix this method
+  void menuLogic() {
     if (controller.status == AnimationStatus.completed) {
       controller.reverse();
       return;

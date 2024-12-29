@@ -1,3 +1,4 @@
+import 'package:animations/animations.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_portal/flutter_portal.dart';
@@ -19,7 +20,7 @@ final class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView>
-    with HomeViewMixin, SingleTickerProviderStateMixin {
+    with HomeViewMixin, TickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
@@ -28,7 +29,15 @@ class _HomeViewState extends State<HomeView>
       vsync: this,
       duration: const Duration(milliseconds: 500),
     );
-    animation = Tween<double>(begin: 0, end: 1).animate(controller);
+    menuController = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 500),
+    );
+    menuAnimation = Tween<double>(begin: 0, end: 1).animate(controller);
+    animation = CurvedAnimation(
+      parent: controller,
+      curve: Curves.easeInOut,
+    );
   }
 
   @override
@@ -48,20 +57,23 @@ class _HomeViewState extends State<HomeView>
                   follower: Alignment.topRight,
                   target: Alignment.topLeft,
                 ),
-                portalFollower: Container(
-                  decoration: const BoxDecoration(
-                    color: Colors.black,
-                    borderRadius: BorderRadiusGeneral.all(),
-                  ),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    spacing: WidgetSizes.spacingS,
-                    children: menuItems,
+                portalFollower: FadeScaleTransition(
+                  animation: animation,
+                  child: Container(
+                    decoration: const BoxDecoration(
+                      color: Colors.black,
+                      borderRadius: BorderRadiusGeneral.all(),
+                    ),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      spacing: WidgetSizes.spacingS,
+                      children: menuItems,
+                    ),
                   ),
                 ),
                 child: IconButton(
                   onPressed: () {
-                    menuAnimation();
+                    menuLogic();
                     setState(() {
                       isMenuOpen = !isMenuOpen;
                     });

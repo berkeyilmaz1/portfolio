@@ -18,6 +18,14 @@ final class MainApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Berke Yılmaz',
         theme: ThemeData(
+          fontFamily: 'Nohemi',
+          textTheme: const TextTheme(
+            bodyLarge: TextStyle(fontWeight: FontWeight.w400), // Regular
+            bodyMedium: TextStyle(fontWeight: FontWeight.w300), // Light
+            bodySmall: TextStyle(fontWeight: FontWeight.w100), // Thin
+            headlineMedium: TextStyle(fontWeight: FontWeight.w700), // Bold
+            titleLarge: TextStyle(fontWeight: FontWeight.w500), //Medium
+          ),
           scaffoldBackgroundColor: Colors.white,
         ),
         home: ChangeNotifierProvider(

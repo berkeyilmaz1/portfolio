@@ -26,6 +26,16 @@ class _BaseViewState extends State<BaseView> {
         child: const Column(
           children: [
             HomeView(),
+            Text('Bu Regular bir yazıdır.',
+                style: TextStyle(fontWeight: FontWeight.w400)),
+            Text('Bu Light bir yazıdır.',
+                style: TextStyle(fontWeight: FontWeight.w300)),
+            Text('Bu Bold bir yazıdır.',
+                style: TextStyle(fontWeight: FontWeight.w700)),
+            Text('Bu Thin bir yazıdır.',
+                style: TextStyle(fontWeight: FontWeight.w100)),
+            Text('Bu Medium bir yazıdır.',
+                style: TextStyle(fontWeight: FontWeight.w500)),
           ],
         ),
       ),

@@ -56,16 +56,16 @@ class _AnimatedTextViewState extends State<AnimatedTextView>
                     const Text(
                       LocaleKeys.home_berke,
                       style: TextStyle(
-                        fontSize: 96,
-                        fontWeight: FontWeight.bold,
+                        fontSize: 124,
+                        fontWeight: FontWeight.w700,
                         color: Colors.black,
                       ),
                     ).tr(),
                     const Text(
                       LocaleKeys.home_yilmaz,
                       style: TextStyle(
-                        fontSize: 96,
-                        fontWeight: FontWeight.bold,
+                        fontSize: 124,
+                        fontWeight: FontWeight.w700,
                         color: Colors.black,
                       ),
                     ).tr(),
@@ -80,8 +80,9 @@ class _AnimatedTextViewState extends State<AnimatedTextView>
                     const Text(
                       LocaleKeys.home_subtitle,
                       style: TextStyle(
-                        fontSize: 18,
+                        fontSize: 28,
                         fontStyle: FontStyle.italic,
+                        fontWeight: FontWeight.w300,
                         color: Colors.black,
                       ),
                     ).tr(),

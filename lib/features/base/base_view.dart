@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/features/about/view/about_view.dart';
 import 'package:portfolio/features/home/view/home_view.dart';
 
 class BaseView extends StatefulWidget {
@@ -9,36 +10,39 @@ class BaseView extends StatefulWidget {
 }
 
 class _BaseViewState extends State<BaseView> {
-  late final ScrollController _scrollController;
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    _scrollController = ScrollController();
-  }
-
+  final PageController controller = PageController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: SingleChildScrollView(
-        controller: _scrollController,
-        child: const Column(
-          children: [
-            HomeView(),
-            Text('Bu Regular bir yazıdır.',
-                style: TextStyle(fontWeight: FontWeight.w400)),
-            Text('Bu Light bir yazıdır.',
-                style: TextStyle(fontWeight: FontWeight.w300)),
-            Text('Bu Bold bir yazıdır.',
-                style: TextStyle(fontWeight: FontWeight.w700)),
-            Text('Bu Thin bir yazıdır.',
-                style: TextStyle(fontWeight: FontWeight.w100)),
-            Text('Bu Medium bir yazıdır.',
-                style: TextStyle(fontWeight: FontWeight.w500)),
-          ],
-        ),
+      body: PageView(
+        scrollDirection: Axis.vertical,
+        controller: controller,
+        children: const [
+          HomeView(),
+          AboutView(),
+        ],
       ),
     );
   }
 }
+  // Text(
+          //   'Bu Regular bir yazıdır.',
+          //   style: TextStyle(fontWeight: FontWeight.w400),
+          // ),
+          // Text(
+          //   'Bu Light bir yazıdır.',
+          //   style: TextStyle(fontWeight: FontWeight.w300),
+          // ),
+          // Text(
+          //   'Bu Bold bir yazıdır.',
+          //   style: TextStyle(fontWeight: FontWeight.w700),
+          // ),
+          // Text(
+          //   'Bu Thin bir yazıdır.',
+          //   style: TextStyle(fontWeight: FontWeight.w100),
+          // ),
+          // Text(
+          //   'Bu Medium bir yazıdır.',
+          //   style: TextStyle(fontWeight: FontWeight.w500),
+          // ),]

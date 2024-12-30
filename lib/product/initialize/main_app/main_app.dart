@@ -19,6 +19,9 @@ final class MainApp extends StatelessWidget {
         title: 'Berke Yılmaz',
         theme: ThemeData(
           fontFamily: 'Nohemi',
+          appBarTheme: const AppBarTheme(
+            color: Colors.transparent,
+          ),
           textTheme: const TextTheme(
             bodyLarge: TextStyle(fontWeight: FontWeight.w400), // Regular
             bodyMedium: TextStyle(fontWeight: FontWeight.w300), // Light

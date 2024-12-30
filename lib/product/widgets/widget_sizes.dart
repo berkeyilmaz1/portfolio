@@ -6,6 +6,7 @@ import 'package:flutter/foundation.dart';
 final class WidgetSizes {
   const WidgetSizes._();
   static const double footerHeight = 50;
+  static const int one = 1;
 
   /// [value] is 0.0
   static const double spacingZero = 0;

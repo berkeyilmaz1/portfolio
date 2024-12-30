@@ -17,6 +17,8 @@ dependencies:
   go_router: ^14.6.2
   flutter_portal: ^1.1.4
   animations: ^2.0.11
+  motion: ^2.0.1
+  flutter_staggered_animations: ^1.1.1
 
 dev_dependencies:
   flutter_test:
@@ -32,6 +34,7 @@ flutter:
   assets:
     - assets/translations/
     - assets/fonts/
+    - assets/images/
 
   fonts:
     - family: Nohemi

@@ -29,11 +29,6 @@ class _HomeViewState extends State<HomeView>
       vsync: this,
       duration: const Duration(milliseconds: 500),
     );
-    menuController = AnimationController(
-      vsync: this,
-      duration: const Duration(milliseconds: 500),
-    );
-    menuAnimation = Tween<double>(begin: 0, end: 1).animate(controller);
     animation = CurvedAnimation(
       parent: controller,
       curve: Curves.easeInOut,

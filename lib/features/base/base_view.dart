@@ -23,8 +23,8 @@ class _BaseViewState extends State<BaseView> {
         children: const [
           HomeView(),
           AboutView(),
-          ContactView(),
           WorksView(),
+          ContactView(),
         ],
       ),
     );

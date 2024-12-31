@@ -12,6 +12,7 @@ abstract class  LocaleKeys {
   static const projects = 'projects';
   static const contact_title = 'contact.title';
   static const contact_getInTouch = 'contact.getInTouch';
+  static const contact_thanks = 'contact.thanks';
   static const contact = 'contact';
   static const experience_title = 'experience.title';
   static const experience = 'experience';

@@ -13,7 +13,8 @@
     },
     "contact":{
         "title":"İletişim",     
-        "getInTouch":"Bana Ulaşın"   
+        "getInTouch":"Bana Ulaşın",
+        "thanks": "Teşekkürler!"
     },
     "experience":{
         "title":"Deneyim"

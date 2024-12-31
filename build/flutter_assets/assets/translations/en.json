@@ -13,7 +13,8 @@
     },
     "contact":{
         "title":"Contact",
-        "getInTouch":"Get In Touch"
+        "getInTouch":"Get In Touch",
+        "thanks": "Thanks!"
     },
     "experience":{
         "title":"Experience"

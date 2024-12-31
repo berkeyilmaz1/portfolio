@@ -9,11 +9,12 @@
         "message":"Ben Berke Yılmaz,\n20 yaşında, öğrenmeye ve gelişmeye açık bir Mobil Uygulama Geliştiricisi ve aynı zamanda Bilgisayar Mühendisliği öğrencisiyim.\nŞu ana kadar birçok proje ve uygulama geliştirerek, özellikle mobil uygulamalar alanında önemli deneyimler kazandım.\nHer geçen gün yeni beceriler edinerek, kendimi sürekli olarak geliştirmeyi ve daha yenilikçi projeler üretmeyi hedefliyorum."
     },
     "projects":{
-        "title":"Projeler",
-        "getInTouch":"Bana Ulaşın"       
+        "title":"Projeler"   
     },
     "contact":{
-        "title":"İletişim"
+        "title":"İletişim",     
+        "getInTouch":"Bana Ulaşın",
+        "thanks": "Teşekkürler!"
     },
     "experience":{
         "title":"Deneyim"

@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_portal/flutter_portal.dart';
-import 'package:portfolio/features/base/base_view.dart';
+import 'package:portfolio/features/contact/view/contact_view.dart';
 import 'package:portfolio/product/initialize/providers/language_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -33,7 +33,7 @@ final class MainApp extends StatelessWidget {
         ),
         home: ChangeNotifierProvider(
           create: (_) => LanguageProvider(),
-          child: const BaseView(),
+          child: const ContactView(),
         ),
       ),
     );

@@ -6,13 +6,14 @@
     },
     "about":{
         "title":"About Me",
-        "message":"I'm Berke Yılmaz,\nI'm 20 years old, an open-minded mobile application developer, and also a Computer Engineering student.\nSo far, I have developed many projects and applications, gaining significant experience, especially in mobile application development.\nEvery day, I aim to improve myself by gaining new skills and to create more innovative projects."
+        "message":"I'm Berke Yılmaz,\nI'm 20 years old, an open-minded Mobile Application Developer, and also a Computer Engineering student.\nSo far, I have developed many projects and applications, gaining significant experience, especially in mobile application development.\nEvery day, I aim to improve myself by gaining new skills and to create more innovative projects."
     },
     "projects":{
         "title":"Projects"
     },
     "contact":{
-        "title":"Contact"
+        "title":"Contact",
+        "getInTouch":"Get In Touch"
     },
     "experience":{
         "title":"Experience"

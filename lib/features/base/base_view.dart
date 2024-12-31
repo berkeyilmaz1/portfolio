@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/features/about/view/about_view.dart';
+import 'package:portfolio/features/contact/view/contact_view.dart';
 import 'package:portfolio/features/home/view/home_view.dart';
+import 'package:portfolio/features/works/view/works_view.dart';
 
 class BaseView extends StatefulWidget {
   const BaseView({super.key});
@@ -21,28 +23,10 @@ class _BaseViewState extends State<BaseView> {
         children: const [
           HomeView(),
           AboutView(),
+          ContactView(),
+          WorksView(),
         ],
       ),
     );
   }
 }
-  // Text(
-          //   'Bu Regular bir yazıdır.',
-          //   style: TextStyle(fontWeight: FontWeight.w400),
-          // ),
-          // Text(
-          //   'Bu Light bir yazıdır.',
-          //   style: TextStyle(fontWeight: FontWeight.w300),
-          // ),
-          // Text(
-          //   'Bu Bold bir yazıdır.',
-          //   style: TextStyle(fontWeight: FontWeight.w700),
-          // ),
-          // Text(
-          //   'Bu Thin bir yazıdır.',
-          //   style: TextStyle(fontWeight: FontWeight.w100),
-          // ),
-          // Text(
-          //   'Bu Medium bir yazıdır.',
-          //   style: TextStyle(fontWeight: FontWeight.w500),
-          // ),]
